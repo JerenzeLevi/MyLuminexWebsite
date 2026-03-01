@@ -42,7 +42,7 @@ waaaah i did not named it using kebab-case, my apologies!
 </p>
 
 ---
-
+```text
       .           .
              * .
   .      .           .             .
