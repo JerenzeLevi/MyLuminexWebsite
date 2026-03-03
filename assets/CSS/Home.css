@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px 60px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 200px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links li:first-child {
+    margin-right: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.login-btn:hover {
+    color: #ffd700;
+    text-shadow: 0 0 8px #ffd700;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 25px;
+}
+
+.cart-icon {
+    height: 60px;
+    cursor: pointer;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 40%;
+    left: 60px;
+    max-width: 1000px;
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.hero-text p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Promo Section */
+.info-promo {
+    padding: 2rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.promo-card {
+    display: inline-block;
+    background: radial-gradient(circle, #111 30%, black 100%);
+    border: 3px solid yellow;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 200px;
+    margin: 1rem;
+    box-shadow: 0 0 20px yellow;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promo-img {
+    width: 100%;
+    height: auto;
+}
+
+.promo-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #00f5ff;
+    text-shadow: 0 0 10px #00f5ff;
+}
+
+.promo-card:nth-child(2) .promo-title,
+.promo-card:nth-child(3) .promo-title {
+    color: #fff06b;
+    text-shadow: 0 0 10px #fff06b;
+}
+
+.promo-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 0 40px #ffff66;
+}
+
+/* Info Links */
+.info-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.info-column {
+    margin: 1rem;
+    min-width: 180px;
+}
+
+.info-column h3 {
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+.info-column ul {
+    list-style: none;
+}
+
+.info-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Footer */
+.main-footer {
+    background: url('city footer.jpg') no-repeat center center/cover;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.footer-col h3 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-icon {
+    height: 80px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+/* Ensure promo links work */
+.promo-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ======================= */
+/* SIDE PANEL STYLES */
+/* ======================= */
+.side-panel {
+    position: fixed;
+    top: 0;
+    left: -320px; /* hidden initially */
+    width: 280px;
+    height: 100%;
+    background: #0a0a0a;
+    padding: 30px 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    box-shadow: 5px 0 20px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-panel.open {
+    left: 0;
+}
+
+/* Profile section */
+.profile-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 15px #ffd700;
+}
+
+.profile-section h2 {
+    font-size: 1.5rem;
+    color: #ffff66;
+    text-shadow: 0 0 10px #ffd700;
+}
+
+/* Menu links */
+.panel-links {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.panel-links li {
+    margin: 12px 0;
+}
+
+.panel-links a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #ffff66;
+    color: #111;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0 12px #ffff66;
+    transition: all 0.3s ease;
+}
+
+.panel-links a:hover {
+    background: #ffd700;
+    box-shadow: 0 0 20px #ffd700;
+}
+
+/* Logout button — black button with red glow, overrides yellow link styles */
+.panel-links a.logout {
+    background: #000 !important; /* black base */
+    color: #ff3333 !important; /* red text */
+    box-shadow: 0 0 12px #ff3333 !important; /* red glow */
+    text-shadow: 0 0 6px #ff3333; /* red text glow */
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.panel-links a.logout:hover {
+    background: #ff4444 !important; /* red background */
+    color: black !important; /* black text */
+    box-shadow: 0 0 20px #ff4444 !important; /* stronger red glow */
+    text-shadow: 0 0 6px black; /* black text glow */
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 900;
+    display: none;
+}
+
+.overlay.show {
+    display: block;
+}
