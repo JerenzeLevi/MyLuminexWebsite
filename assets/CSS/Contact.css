@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* Hero section background */
+.hero-section {
+    background: url('background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px 60px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 200px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links li:first-child {
+    margin-right: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.login-btn:hover {
+    color: #ffd700;
+    text-shadow: 0 0 8px #ffd700;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 25px;
+}
+
+.cart-icon {
+    height: 60px;
+    cursor: pointer;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* Hero text */
+.hero-text {
+    position: absolute;
+    top: 40%;
+    left: 60px;
+    max-width: 10000px;
+    transition: 0.3s;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.hero-text p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-text {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* Contact Help section */
+.contact-help {
+  background-color: black;
+  color: white;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.help-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.help-title h2 {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 0 0 10px white;
+  font-weight: bold;
+}
+
+.line-glow {
+  height: 3px;
+  width: 500px;
+  background: yellow;
+  box-shadow: 0 0 15px yellow;
+}
+
+.help-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12rem;
+  margin-left: 80px;
+}
+
+.help-box {
+  max-width: 300px;
+}
+
+.help-icon {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.help-box h3 {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.help-box p {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+}
+
+/* Promo Info Section */
+.info-promo {
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.info-promo .promo-card {
+  display: inline-block;
+  background: radial-gradient(circle, #111 30%, black 100%);
+  border: 3px solid yellow;
+  border-radius: 15px;
+  padding: 1rem;
+  width: 200px;
+  margin: 1rem;
+  box-shadow: 0 0 20px yellow;
+  transition: transform 0.3s ease;
+}
+
+.promo-img {
+  width: 100%;
+  height: auto;
+}
+
+.promo-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #00f5ff;
+  text-shadow: 0 0 10px #00f5ff;
+}
+
+.promo-card:nth-child(2) .promo-title,
+.promo-card:nth-child(3) .promo-title {
+  color: #fff06b;
+  text-shadow: 0 0 10px #fff06b;
+  transition: transform 0.3s ease;
+}
+
+/* Info Links */
+.info-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.info-column {
+  margin: 1rem;
+  min-width: 180px;
+}
+
+.info-column h3 {
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.info-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Footer */
+.main-footer {
+  background: url('city footer.jpg') no-repeat center center/cover;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.footer-col h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-icon {
+  height: 80px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.promo-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+/* ===========================
+   SIDE PANEL (Home / About style)
+   =========================== */
+.side-panel {
+    position: fixed;
+    top: 0;
+    left: -320px;          /* hidden initially (same placement as Home) */
+    width: 280px;
+    height: 100%;
+    background: #0a0a0a;
+    padding: 30px 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    box-shadow: 5px 0 20px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-panel.open {
+    left: 0;
+}
+
+/* Profile section inside panel */
+.profile-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 15px #ffd700;
+    object-fit: cover;
+}
+
+.profile-section h2 {
+    font-size: 1.5rem;
+    color: #ffff66;
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+    margin-bottom: 12px;
+}
+
+/* Panel links (buttons) */
+.panel-links {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.panel-links li {
+    margin: 12px 0;
+}
+
+.panel-links a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #ffff66;         /* yellow button look for normal panel items */
+    color: #111;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0 12px #ffff66;
+    transition: all 0.3s ease;
+}
+
+.panel-links a:hover {
+    background: #ffd700;
+    box-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700;
+}
+
+/* Logout button — black with red glow (your custom style) */
+.panel-links a.logout {
+    margin-top: auto;
+    background: #000 !important;      /* black base */
+    color: #ff3333 !important;        /* red text */
+    box-shadow: 0 0 12px #ff3333 !important; /* red glow */
+    text-shadow: 0 0 6px #ff3333;
+    border: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.panel-links a.logout:hover {
+    background: #ff4444 !important;   /* red background on hover */
+    color: black !important;          /* black text */
+    box-shadow: 0 0 20px #ff4444 !important;
+    text-shadow: 0 0 6px black;
+}
+
+/* Overlay (dim background when panel open) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 900;
+    display: none;
+}
+
+.overlay.show {
+    display: block;
+}
